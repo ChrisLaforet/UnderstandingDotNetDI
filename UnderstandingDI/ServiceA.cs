@@ -2,14 +2,11 @@
 {
 	public class ServiceA : IServiceA
 	{
+		public IServiceB ServiceB { get; set; }
 
-		private IServiceB serviceB;
-
-		public ServiceA(IServiceB serviceB) => this.serviceB = serviceB;
-		
 		public string jobA()
 		{
-			return "jobA(" + serviceB.jobB() + ")";
+			return "jobA(" + this.ServiceB.jobB() + ")";
 		}
 	}
 }
