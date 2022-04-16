@@ -1,6 +1,6 @@
 ﻿namespace UnderstandingDI
 {
-	public class ServiceB
+	public class ServiceB : IServiceB
 	{
 		public string jobB()
 		{

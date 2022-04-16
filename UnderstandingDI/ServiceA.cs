@@ -1,11 +1,11 @@
 ﻿namespace UnderstandingDI
 {
-	public class ServiceA
+	public class ServiceA : IServiceA
 	{
 
-		private ServiceB serviceB;
+		private IServiceB serviceB;
 
-		public ServiceA(ServiceB serviceB) => this.serviceB = serviceB;
+		public ServiceA(IServiceB serviceB) => this.serviceB = serviceB;
 		
 		public string jobA()
 		{
