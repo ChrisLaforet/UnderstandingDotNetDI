@@ -6,7 +6,10 @@ namespace UnderstandingDI
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine(ServiceA.jobA());
+			var serviceB = new ServiceB();
+			var serviceA = new ServiceA(serviceB);
+			
+			Console.WriteLine(serviceA.jobA());
 		}
 	}
 }

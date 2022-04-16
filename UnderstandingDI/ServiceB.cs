@@ -2,7 +2,7 @@
 {
 	public class ServiceB
 	{
-		public static string jobB()
+		public string jobB()
 		{
 			return "jobB()";
 		}

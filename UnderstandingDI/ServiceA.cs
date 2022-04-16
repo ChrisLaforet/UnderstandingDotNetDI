@@ -2,9 +2,14 @@
 {
 	public class ServiceA
 	{
-		public static string jobA()
+
+		private ServiceB serviceB;
+
+		public ServiceA(ServiceB serviceB) => this.serviceB = serviceB;
+		
+		public string jobA()
 		{
-			return "jobA(" + ServiceB.jobB() + ")";
+			return "jobA(" + serviceB.jobB() + ")";
 		}
 	}
 }
