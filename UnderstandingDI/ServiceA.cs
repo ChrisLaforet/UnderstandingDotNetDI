@@ -2,6 +2,7 @@
 {
 	public class ServiceA : IServiceA
 	{
+		[Inject] 
 		public IServiceB ServiceB { get; set; }
 
 		public string jobA()

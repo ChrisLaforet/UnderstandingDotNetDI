@@ -27,6 +27,11 @@ namespace UnderstandingDI
 			{
 				foreach (var property in serviceInstance.GetType().GetProperties())
 				{
+					if (property.GetCustomAttributes(typeof(InjectAttribute), false).Length == 0)
+					{
+						// this field is none of our business since there are none of our attributes here
+						continue;
+					}
 					var propertyType = property.PropertyType;
 					
 					foreach (var matchPartner in serviceInstances)
