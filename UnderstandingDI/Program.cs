@@ -6,7 +6,7 @@ namespace UnderstandingDI
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			Console.WriteLine(ServiceA.jobA());
 		}
 	}
 }
