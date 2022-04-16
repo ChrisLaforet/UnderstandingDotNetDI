@@ -29,7 +29,7 @@ namespace UnderstandingDI
 				{
 					if (property.GetCustomAttributes(typeof(InjectAttribute), false).Length == 0)
 					{
-						// this field is none of our business since there are none of our attributes here
+						// this field is none of our business since it is not annotated with [Inject]
 						continue;
 					}
 					var propertyType = property.PropertyType;

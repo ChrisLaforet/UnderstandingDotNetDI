@@ -1,5 +1,6 @@
 ﻿namespace UnderstandingDI
 {
+	[Service]
 	public class ServiceB : IServiceB
 	{
 		[Inject]

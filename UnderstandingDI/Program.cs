@@ -9,16 +9,13 @@ namespace UnderstandingDI
 	{
 		static void Main(string[] args)
 		{
-			var context = CreateContext();
+			var context = CreateContextForAssembly();
 			DoBusinessLogic(context);
 		}
 
-		private static DIContext CreateContext()
+		private static DIContext CreateContextForAssembly()
 		{
-			var serviceClasses = new HashSet<Type>();
-			serviceClasses.Add(typeof(ServiceA));
-			serviceClasses.Add(typeof(ServiceB));
-			return new DIContext(serviceClasses);
+			return new DIContext(AssemblyScanner.GetAllServiceClassesInCurrentExecutingAssembly());
 		}
 
 		private static void DoBusinessLogic(DIContext context)
